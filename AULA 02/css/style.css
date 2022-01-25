@@ -61,19 +61,10 @@ input{
     color: #ffffff;
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.msgErro{
+    font-family: Verdana;
+    font-size: 1.5em;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    text-align: center;
+}
