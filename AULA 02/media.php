@@ -63,7 +63,12 @@ if (isset($_POST['btncalc'])) {
 
 <head>
     <title>Média</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/reset.css">
+
+
     <meta charset="utf-8">
 </head>
 
@@ -71,32 +76,51 @@ if (isset($_POST['btncalc'])) {
 
     <div id="conteudo">
         <header id="titulo">
-            Calculo de Médias
-        </header>
+        <nav class="menu">
+            <ul class="dropdown-menu">                
+                <li>                  
+                    <a class="pontinho" >≡</a>
+                  
+                    <ul class="dropdown-submenu">
+                        <a id="list" href="">Tabuada</a>
+                        <a id="list" href="">Media</a>
+                        <a id="list" href="">Par e ímpar</a>
+                        <a id="list" href="">Calculadora</a>
+                        <a id="list" href="">Inicio</a>
+                    </ul>
+                </li>   
+                <div class="home"><h1>Média</h1></div>   
+            </ul>        
+        </nav>
+        </div>
+    </header>
 
+
+
+    <main>
         <div id="form">
             <form name="frmMedia" method="post" action="media.php">
                 <div>
-                    <label>Nota 1:</label>
+                    <label id="texto">Nota 1:</label>
                     <input type="text" name="txtn1" value="<?php echo ($nota1) ?>">
                 </div>
 
                 <div>
-                    <label>Nota 2:</label>
+                    <label id="texto">Nota 2:</label>
                     <input type="text" name="txtn2" value="<?php echo ($nota2) ?>">
                 </div>
 
                 <div>
-                    <label>Nota 3:</label>
+                    <label id="texto">Nota 3:</label>
                     <input type="text" name="txtn3" value="<?php echo ($nota3) ?>">
                 </div>
 
                 <div>
-                    <label>Nota 4:</label>
+                    <label id="texto">Nota 4:</label>
                     <input type="text" name="txtn4" value="<?php echo ($nota4) ?>">
                 </div>
                 <div>
-                    <input type="submit" name="btncalc" value="Calcular">
+                    <input id="botaoCalcular" type="submit" name="btncalc" value="Calcular">
                     <div id="botaoReset">
                         <a href="media.php">
                             Novo Cálculo
@@ -104,12 +128,14 @@ if (isset($_POST['btncalc'])) {
                     </div>
                 </div>
             </form>
-
         </div>
+
+    </main>
+
         <footer id="resultado">
             A média é: <?php echo ($media); ?>
         </footer>
-    </div>
+
 
 
 </body>
